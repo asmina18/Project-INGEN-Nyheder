@@ -1,24 +1,33 @@
 .footerContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-top: 2rem;
     background-color: var(--white);
-    padding-bottom: 2em;
-}
 
-ul {
-    padding: 1em;
+    div {
+        width: 1280px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 2rem;
+        margin-top: 2rem;
 
-    li {
-        font-size: 1rem;
-        text-align: justify;
-        list-style: none;
-        margin-bottom: 5px;
+        ul {
+            padding: 1em;
+
+            li {
+                // font-size: 1rem;'
+                text-align: left;
+                list-style: none;
+                margin-bottom: 5px;
+                // margin-left: 9rem;
+            }
+
+            a {
+                color: var(--black);
+                text-decoration: 0;
+
+            }
+        }
     }
 
-    a {
-        color: var(--black);
-        text-decoration: 0;
 
-    }
+
 }

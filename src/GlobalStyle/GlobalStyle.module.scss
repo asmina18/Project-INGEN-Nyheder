@@ -25,7 +25,8 @@ body {
 //-------------CategoryPage Style
 .sectionStyle {
    background-color: var(--light-gray);
-   max-width: 1230px;
+   // border: solid #55bd5c 3px;
+   max-width: 1200px;
    margin: auto;
    display: grid;
    gap: 1rem;
@@ -41,20 +42,17 @@ body {
 
    ;
 
-   // .sectionStyle:nth-child(6) {
-   //    background-color: rebeccapurple;
-   // }
-
-
-   h2 {
+   .headlineStyle {
       color: var(--black);
       font-size: 1.5rem;
       font-weight: 400;
       font-family: var(--primary-font-family);
-
+      // border: 2px solid red;
    }
 
-   p {
+   .dateStyle {
+      color: var(--red);
+      justify-self: end;
       font-size: 1rem;
    }
 
@@ -69,8 +67,11 @@ body {
       // border: 3px solid red;
       background-color: var(--white);
 
+
       a {
          text-decoration: none;
+
+
       }
 
       img {
@@ -134,7 +135,7 @@ body {
    }
 }
 
-//--------------------------------------------------Ditails style ------------
+//--------------------------------------------------Ditails Button style ------------
 button {
    font-size: 1rem;
    // font-family: var(--primary-font-family);
