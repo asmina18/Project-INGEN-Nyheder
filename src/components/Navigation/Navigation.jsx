@@ -17,7 +17,7 @@ export const Navigation = () => (
             {/* <NavLink style={({ isActive }) => ({ color: isActive ? 'red' : 'black' })} to="/login">Login</NavLink> */}
             <div className={style.svgStyle}>
                 <BsFillPersonFill />
-                <GiHamburgerMenu />
+                {/* <GiHamburgerMenu /> */}
             </div>
         </div>
     </nav>
