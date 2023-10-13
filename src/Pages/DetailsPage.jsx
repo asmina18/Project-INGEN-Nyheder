@@ -48,7 +48,7 @@ export const Details = () => {
    return (
       <>
          {dataArray &&
-            <section>
+            <section className={style.sectionDetailsStyle}>
                {
                   // Mapping gennem det filtrerede datarray for at vise artikeloplysninger
                   dataArray.map((item, index) => {
@@ -63,9 +63,9 @@ export const Details = () => {
                            {/* Visning af artikelens overskrift */}
                            <h2>{item.fields.headline}</h2>
                            {/* Visning af artikelens dato */}
-                           <p>{`D.${(new Date(item.fields.date).getDate() < 10 ? '0' : '') + new Date(item.fields.date).getDate()}/${(new Date(item.fields.date).getMonth() < 9 ? '0' : '') + (new Date(item.fields.date).getMonth() + 1)}-${new Date(item.fields.date).getFullYear()}-af:AIM`}</p>
+                           <p className={style.dateStyle}>{`D.${(new Date(item.fields.date).getDate() < 10 ? '0' : '') + new Date(item.fields.date).getDate()}/${(new Date(item.fields.date).getMonth() < 9 ? '0' : '') + (new Date(item.fields.date).getMonth() + 1)}-${new Date(item.fields.date).getFullYear()}-af:AIM`}</p>
                            {/* Mapping gennem indholdet af artikelens tekst */}
-                           <div>{item.fields.article.content.map((item, index) => {
+                           <div className={style.textDiv}>{item.fields.article.content.map((item, index) => {
                               return (
                                  <article key={index} >
                                     {item.content.map((item, index) => {

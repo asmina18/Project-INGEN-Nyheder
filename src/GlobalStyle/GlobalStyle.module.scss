@@ -17,6 +17,7 @@
 }
 
 body {
+
    background-color: var(--light-gray);
    font-family: var(--primary-font-family);
 }
@@ -59,14 +60,13 @@ body {
 
    img {
       width: 100%;
-      height: auto;
    }
 
 
 
 
    .divStyle {
-      border: 3px solid red;
+      // border: 3px solid red;
       background-color: var(--white);
 
       a {
@@ -78,12 +78,63 @@ body {
          /* Kartinka zanimaet vsyo dostupnoye prostranstvo vnutri svoey kolonki */
          height: auto;
          /* Sokhranenie proporcii */
-
       }
+
+      //eto kod ne rabotaet
+      // img:nth-child(1) {
+      //    border: solid rebeccapurple 2px;
+      // }
    }
 }
 
-//-------Ditails style ------------
+//--------------------------------******SECTION DETAILS STYLE****************----------------------------------------------------------/
+.sectionDetailsStyle {
+   font-family: var(--primary-font-family);
+   font-size: 1rem;
+   font-weight: 400;
+   max-width: 1200px;
+   margin: auto;
+
+   article {
+
+      h2 {
+         font-family: var(--primary-font-family);
+         font-size: 2rem;
+         margin: 1rem 0;
+         font-weight: 300;
+         text-align: left;
+      }
+
+      img {
+         width: 100%;
+         height: 50vh;
+         object-fit: cover;
+      }
+
+      p {
+         padding-bottom: 20px;
+         text-align: center;
+         align-items: center;
+         justify-content: center;
+         text-align: justify;
+         // background-color: #C52525;
+
+
+      }
+
+      .dateStyle {
+         color: red;
+      }
+
+      .textDiv {
+         width: 700px;
+         margin: auto;
+      }
+
+   }
+}
+
+//--------------------------------------------------Ditails style ------------
 button {
    font-size: 1rem;
    // font-family: var(--primary-font-family);
@@ -97,16 +148,17 @@ button {
    color: var(--black);
 }
 
+
 //Media Query til mindre skærme
 
-@media screen and (max-width: 500px) {
-   .sectionStyle .navCantaine {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      border: 3px solid saddlebrown;
+// @media screen and (max-width: 500px) {
+//    .sectionStyle .navCantaine {
+//       display: flex;
+//       flex-direction: column;
+//       width: 100%;
+//       border: 3px solid saddlebrown;
 
-   }
+// }
 
 
-}
+// }
