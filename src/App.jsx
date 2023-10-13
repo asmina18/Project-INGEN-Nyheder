@@ -9,6 +9,7 @@ import { Details } from './Pages/DetailsPage'
 
 function App() {
   return (
+    // BrowserRouter bruges til at indpakke hele applikationen og give routingfunktionalitet.
     <BrowserRouter>
       <Routes>
         {/* // Definere hovedruten med et element, der repræsenterer hovedlayoutet (MainLayout) */}

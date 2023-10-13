@@ -3,8 +3,6 @@ import { Footer } from "../components/Footer/Footer";
 import { Navigation } from "../components/Navigation/Navigation";
 import style from './MainLayout.module.scss'
 
-
-
 export const MainLayout = () => {
 
   return (
@@ -12,7 +10,6 @@ export const MainLayout = () => {
       <Navigation />'
       <Outlet />
       <Footer />
-
     </div>
   );
 };

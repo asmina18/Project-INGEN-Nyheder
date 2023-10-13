@@ -1,4 +1,4 @@
-// Importering af nødvendige komponenter og biblioteker fra React og React Router
+
 import { Link, useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
 import * as contentful from 'contentful';
