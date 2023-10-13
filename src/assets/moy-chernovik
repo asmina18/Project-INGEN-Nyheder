@@ -1,0 +1,95 @@
+(new Date(item.fields.date).getDate() < 10 ? '0' : '' ) + new Date(item.fields.date).getDate(): Этот фрагмент кода
+   гарантирует, что день месяца всегда состоит из двух цифр. Если день меньше 10, добавляется ведущий '0' , в противном
+   случае добавляется пустая строка. /${(new Date(item.fields.date).getMonth() < 9 ? '0' : '' ) + (new
+   Date(item.fields.date).getMonth() + 1)}: Этот фрагмент кода гарантирует, что месяц всегда состоит из двух цифр. Он
+   проверяет, если месяц меньше 9, и в этом случае добавляет ведущий '0' . К месяцу прибавляется 1, потому что месяцы в
+   JavaScript нумеруются с нуля (0=январь, 1=февраль и так далее). -${new Date(item.fields.date).getFullYear()}-af:AIM:
+   Этот фрагмент кода добавляет год и статический суффикс ("-af:AIM") к отформатированной дате. В итоге эта строка
+   создает строку в формате "D.DD/MM-YYYY-af:AIM" , где: D - это буква. DD - день месяца, дополненный ведущим '0' при
+   необходимости. / - буква. MM - месяц, дополненный ведущим '0' при необходимости. - - буква. YYYY - год. -af:AIM -
+   статический суффикс. Короче говоря, эта строка создает отформатированную дату на основе информации о дате из свойства
+   item.fields.date. <!-- <>
+   {dataArray && (
+   <section className={`${style.sectionStyle}`}>
+
+      {dataArray.map((item, index) => (
+      <div className={`${style.divStyle} ${style.large}`} key={index}>
+
+         <h2 className={`${style.headlineStyle} ${style.large}`}>{item.fields.headline}</h2>
+         <Link style={{ color: 'black' , textDecoration: '0' }} to={`/details/${item.sys.id}`}>
+
+         Læs mere
+         </Link>
+         <p className={`${style.dateStyle} ${style.large}`}>
+
+            {`D.${(new Date(item.fields.date).getDate() < 10 ? '0' : '' ) + new Date(item.fields.date).getDate()}/${(new
+               Date(item.fields.date).getMonth() < 9 ? '0' : '' ) + (new Date(item.fields.date).getMonth() + 1)}-${new
+               Date(item.fields.date).getFullYear()}-af:AIM`} </p>
+               <figure className={`${style.figureStyle} ${style.large}`}>
+
+                  {item.fields.gallery && (
+                  <img src={item.fields.gallery.fields.file.url} alt={item.fields.gallery.fields.title} />
+                  )}
+               </figure>
+      </div>
+      ))}
+   </section>
+   )}
+</>
+)
+}; -->
+
+<!-- ----------------------------------------------------------------------------------
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+grid-gap: 20px;
+
+&>div {
+   display: grid;
+   grid-template-areas:
+      "headline"
+      "image"
+      "link"
+      "date";
+
+   h2 {
+      grid-area: headline;
+      font-size: 1.5rem;
+      /* Primer razmera zagolovka, izmenite po svoemu vkusu */
+   }
+
+   a {
+      grid-area: link;
+      color: black;
+      text-decoration: none;
+   }
+
+   p {
+      grid-area: date;
+   }
+
+   figure {
+      grid-area: image;
+      margin-bottom: 10px;
+      /* Dodatok dlya otdeleniya ot drugikh elementov */
+
+      &.large {
+         img {
+            width: 100%;
+            /* Primer shiriny bol'shoy kartinki, izmenite po svoemu vkusu */
+            // height: auto;
+            /* Sokhranenie proporcii */
+         }
+      }
+
+      &.small {
+         img {
+            width: 10%;
+            /* Primer shiriny men'shoy kartinki, izmenite po svoemu vkusu */
+            height: auto;
+            /* Sokhranenie proporcii */
+         }
+      }
+   }
+}
+} -->

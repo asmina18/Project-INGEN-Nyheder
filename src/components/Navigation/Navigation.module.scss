@@ -1,0 +1,68 @@
+@import url(../../GlobalStyle/GlobalStyle.module.scss);
+
+.navCantainer {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 9vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+    // border: solid red 3px;
+    background-color: var(--white);
+
+    .navStyle {
+        // width: 60%;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        align-items: end;
+    }
+
+    h1 {
+        color: var(--red);
+        text-transform: uppercase;
+        line-height: 24px;
+        margin-right: 2rem; // Добавляем отступ справа
+        padding-bottom: 13px;
+    }
+
+    div {
+        // width: 40%;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        align-items: end;
+
+        a {
+            text-decoration: none; //eto uberaet linie po textom 
+            margin-bottom: 1rem;
+            margin-right: 2rem;
+            color: var(--black);
+            border-left: solid black 2px;
+            padding-left: 10px;
+            letter-spacing: 2px;
+
+        }
+
+
+        .svgStyle {
+            color: var(--red);
+            margin-bottom: 1rem;
+            gap: 10px;
+
+        }
+
+    }
+}
+
+// //Media Query til mindre skærme
+// @media (max-width: 750px) {
+//     .navCantainer {
+//         display: block;
+//         flex-direction: column;
+//         grid-column: 1;
+//         width: 100%;
+//         border: 3px solid saddlebrown;
+
+//     }
+
+
+// }

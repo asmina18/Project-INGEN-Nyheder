@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Fauna+One&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   --primary-font-family: 'Roboto Flex', sans-serif;
+   --secondary-font-family: 'Righteous', cursive;
+   --light-gray: #F6F3F3;
+   --white: #ffffff;
+   --black: #000000;
+   --red: #C52525;
+}
+
+body {
+   background-color: var(--light-gray);
+   font-family: var(--primary-font-family);
+}
+
+//-------------CategoryPage Style
+.sectionStyle {
+   background-color: var(--light-gray);
+   max-width: 1230px;
+   margin: auto;
+   display: grid;
+   gap: 1rem;
+   grid-template-areas:
+      "article1 article1 article1 article1"
+      "article1 article1 article1 article1"
+      "article2 article2 article3 article3"
+      "article2 article2 article4 article4"
+      "article5 article5 article4 article4"
+      "article6 article6 article6  article6"
+      "article7 article7 article7 article7"
+      "article8 article8 article9 article9"
+
+   ;
+
+   // .sectionStyle:nth-child(6) {
+   //    background-color: rebeccapurple;
+   // }
+
+
+   h2 {
+      color: var(--black);
+      font-size: 1.5rem;
+      font-weight: 400;
+      font-family: var(--primary-font-family);
+
+   }
+
+   p {
+      font-size: 1rem;
+   }
+
+   img {
+      width: 100%;
+      height: auto;
+   }
+
+
+
+
+   .divStyle {
+      border: 3px solid red;
+      background-color: var(--white);
+
+      a {
+         text-decoration: none;
+      }
+
+      img {
+         width: 100%;
+         /* Kartinka zanimaet vsyo dostupnoye prostranstvo vnutri svoey kolonki */
+         height: auto;
+         /* Sokhranenie proporcii */
+
+      }
+   }
+}
+
+//-------Ditails style ------------
+button {
+   font-size: 1rem;
+   // font-family: var(--primary-font-family);
+   border: none;
+   margin-top: 1.5rem;
+   // box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.homeLinkStyle {
+   text-decoration: none;
+   color: var(--black);
+}
+
+//Media Query til mindre skærme
+
+@media screen and (max-width: 500px) {
+   .sectionStyle .navCantaine {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      border: 3px solid saddlebrown;
+
+   }
+
+
+}

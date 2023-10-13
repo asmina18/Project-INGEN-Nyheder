@@ -1,0 +1,13 @@
+@import url(../GlobalStyle/GlobalStyle.module.scss);
+
+.layoutStyle {
+    width: 1200px;
+    margin: auto;
+    // height: 120vh;
+    // width: 100vw;
+    text-align: center;
+    color: var(--black);
+    background-color: var(--light-gray);
+    font-family: var(--primary-font-family);
+    font-weight: 400;
+}
